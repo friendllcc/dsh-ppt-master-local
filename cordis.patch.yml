@@ -1,0 +1,6 @@
+# dsh-ppt-master-local bundle patch: inserts this plugin into a profile's layer stack.
+# Row id/name must equal the package name (host applyEntryPatches matches
+# row.id == entry.options.id and row.name == entry.options.name).
+- insert:
+    - id: dsh-ppt-master-local
+      name: dsh-ppt-master-local

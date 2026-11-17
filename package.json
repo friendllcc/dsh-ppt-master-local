@@ -1,0 +1,46 @@
+{
+  "name": "dsh-ppt-master-local",
+  "version": "1.0.0",
+  "description": "Vendored ppt-master skill for DeepSeek Harness (DSH): the full Hugo He ppt-master presentation workflow (generate / beautify / template / edit native PPTX) registered as a dsh skill, self-contained with one local fix — the qwen image backend whitelist accepts qwen-image-3.0. Configure your own image API through a .env next to the skill; see README.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "ppt-master",
+    "pptx",
+    "presentation",
+    "qwen-image"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skills/**",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friendllcc/dsh-ppt-master-local.git"
+  },
+  "bugs": {
+    "url": "https://github.com/friendllcc/dsh-ppt-master-local/issues"
+  },
+  "homepage": "https://github.com/friendllcc/dsh-ppt-master-local#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
